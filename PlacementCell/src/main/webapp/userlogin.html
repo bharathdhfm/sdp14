@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #001f3f, #003366);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.form-container {
+    background-color: #003366;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    transition: background-color 0.3s;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.form-container input[type="text"]::placeholder,
+.form-container input[type="password"]::placeholder {
+    color: #bbb;
+}
+
+.form-container input[type="submit"] {
+    background-color: #fff;
+    color: #003366;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #e0e0e0;
+}
+
+.form-container a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.form-container .signup {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Login</h2>
+        <form action="userlogin.jsp" method="post">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <div class="signup">
+        Not Yet Registered   ?  <a href="enteruserdetails.html">signup</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa; /* Fallback color */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+            padding: 10px 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .navbar a:hover {
+            background-color: #6a0dad;
+        }
+
+        .navbar .center h1 {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .logout-btn, .cart-btn {
+            border: 2px solid white;
+            padding: 10px 30px;
+        }
+
+        .logout-btn:hover, .cart-btn:hover {
+            background-color: white;
+            color: #4b0082;
+        }
+
+        .cart-btn {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .cart-btn span {
+            margin-left: 5px;
+        }
+
+        .navbar-link {
+            margin-left: 10px; /* Adjust margin as needed */
+        }
+
+        /* Add some padding to the body to avoid content being under the navbar */
+        .content {
+            padding-top: 150px; /* Adjust this value to your needs */
+            text-align: center;
+            color: #333; /* Greyish black color */
+        }
+
+        /* Static background */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('images/ts3.jpeg') center/cover no-repeat; /* Path to your image */
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar .center {
+                justify-content: flex-start;
+                width: 100%;
+            }
+
+            .navbar a {
+                padding: 10px 20px;
+                width: 100%;
+                text-align: left;
+                margin: 5px 0;
+            }
+
+            .navbar .logout-btn {
+                width: auto;
+                text-align: center;
+                margin-left: auto;
+            }
+
+            .navbar-link {
+                margin-left: 0; /* Adjust for mobile layout */
+                margin-top: 10px; /* Move below "Home" link */
+            }
+
+            .content {
+                padding-top: 100px; /* Adjust this value for smaller screens */
+            }
+
+            .background {
+                top: 0;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="viewproducts.jsp" class="navbar-link">View Applications</a>
+        <div class="center">
+            <h1>Welcome To Placement Portal</h1>
+        </div>
+        <a href="view_cart.jsp" class="cart-btn"><span>VIEW APPLICATIONS</span></a>
+        <a href="navbar.html" class="logout-btn">Logout</a>
+    </div>
+    <div class="content">
+        <!-- Main content here -->
+    </div>
+    <div class="background"></div>
+</body>
+</html>
